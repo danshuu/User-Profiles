@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
-import { connect } from "react-redux";
-import * as actions from "../actions/actions";
 import Profile from "./Profile";
-
-const mapStateToProps = store => ({
-  data: store.data
-});
-
-const mapDispatchToProps = dispatch => ({
-  changeStoreData: data => dispatch(actions.changeStoreData(data))
-});
 
 class App extends Component {
   state = {
@@ -85,7 +75,4 @@ class App extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App;
